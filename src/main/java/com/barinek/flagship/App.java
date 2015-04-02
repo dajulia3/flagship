@@ -54,10 +54,6 @@ public class App {
 
         logger.info("Found {} environment.", env);
 
-        List<String> environments = Lists.newArrayList("development", "test", "production");
-        if (!environments.contains(env)) {
-            throw new RuntimeException("Unknown environmentArg.");
-        }
         return new Environment(env);
     }
 
