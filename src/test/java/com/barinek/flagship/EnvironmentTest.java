@@ -18,7 +18,7 @@ public class EnvironmentTest {
         Injector injector = Guice.createInjector(new TestEnvironment("test"));
         A a = injector.getInstance(A.class);
         assertEquals("42", a.getValue());
-        assertEquals("/bin/bash", a.getShell());
+        assertEquals("/bin/bash", a.getShell()); //This is somewhat brittle
     }
 
     class TestEnvironment extends Environment {
