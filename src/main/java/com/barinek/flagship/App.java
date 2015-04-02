@@ -46,7 +46,7 @@ public class App {
     }
 
     private static Environment loadEnvironment() throws IOException {
-        String env = System.getenv("application_environment");
+        String env = System.getenv("APPLICATION_ENVIRONMENT");
 
         if (env == null) {
             throw new RuntimeException("Missing environment.");
